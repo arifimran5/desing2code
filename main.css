@@ -55,8 +55,16 @@ body {
   transform: scale(1.01);
 }
 
+
 .design-image img {
-  /* max-width: 100%; */
+  width: 250px;
+  
+}
+
+@media (min-width:500px){
+  .design-image img {
+    width: 300px;
+  }
 }
 
 .design-description {

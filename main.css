@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.source-code{
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #222222;
+  color: white;
+  padding: .5em 1em;
+  cursor: pointer;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2em auto;
+  width: 80%;
+}
+
+.desing-card {
+  background-color: #0f1924;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em;
+  padding: 2em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.desing-card:hover {
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.198);
+  background-color: #172535;
+  transform: scale(1.01);
+}
+
+.design-image img {
+  /* max-width: 100%; */
+}
+
+.design-description {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.design-description h1 {
+  margin-top: 0.2em;
+  font-family: 'Merriweather', serif;
+}
+
+.design-description p a {
+  color: rgb(95, 164, 255);
+}
+
+.design-description .desc-para {
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 850px) {
+  .main-title {
+    width: 80%;
+    font-size: 2.2rem;
+  }
+  .desing-card {
+    flex-direction: row;
+    gap: 2em;
+    margin: 1em 2em;
+  }
+
+  .design-image img {
+    width: 250px;
+    
+  }
+
+  .design-description .desc-para {
+    font-size: 1rem;
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .desing-card {
+    gap: 2em;
+    margin: 1em 8em;
+  }
+}

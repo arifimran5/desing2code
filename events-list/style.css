@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  font-family: 'Merriweather', serif;
+  background-color: #eceff8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10em;
+  height: max-content;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin-top: 2em;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 60em;
+  margin-top: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.date-box {
+  padding: 2em 2em;
+  margin: 1.2em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.date-box p {
+  font-family: 'Mulish', sans-serif;
+}
+
+.date-box h1 {
+  font-size: 2rem;
+}
+
+.details-box {
+  max-width: 50%;
+  margin-left: -2em;
+}
+
+.details-box h1 {
+  margin-bottom: 0.5em;
+  font-weight: 900;
+}
+
+.details-box p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: normal;
+}
+
+.button-box {
+  border-radius: 15px;
+  padding: 0.8em 1.2em;
+  border: 1px solid black;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-right: 2em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button-box .button-plus {
+  font-size: 1.5rem;
+  margin-top: -4px;
+}
+
+.event:hover .button-box {
+  background-color: black;
+  color: white;
+}
+
+.event:hover {
+  box-shadow: 3px 5px 12px 5px #00000011;
+}
+
+@media (max-width: 1000px) {
+  .event {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-box {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+  }
+
+  .date-box h1 {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  .date-box p::after {
+    content: '➝';
+    margin-left: 10px;
+  }
+  .details-box {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    max-width: 80%;
+  }
+
+  .button-box {
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 750px) {
+  .main {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .main-title{
+    margin-top: 5em;
+  }
+}

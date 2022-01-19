@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;700&family=Merriweather:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f8ff;
+  z-index: -2;
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
+}
+
+.pink_blob {
+  width: 1000px;
+  height: 1000px;
+  left: -130px;
+  top: 316px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(237, 187, 255, 0.6) 0%,
+    rgba(237, 187, 255, 0) 100%
+  );
+}
+
+.cyan_blob {
+  width: 528px;
+  height: 528px;
+  left: 396px;
+  top: 18px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #c6fcff 0%,
+    rgba(198, 252, 255, 0) 100%
+  );
+}
+
+.orange_blob {
+  width: 624px;
+  height: 624px;
+  left: 923px;
+  top: 169px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffddb6 0%,
+    rgba(255, 221, 182, 0) 100%
+  );
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.712);
+  border: solid 15px white;
+  border-radius: 8px;
+  display: flex;
+  padding: 2em 2em;
+  font-family: 'IBM Plex Sans', sans-serif;
+  gap: 2em;
+}
+
+.pricing_box {
+  width: 13em;
+}
+
+.pricing_box h2 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.pricing_box h1 {
+  font-size: 3rem;
+}
+
+.price_desc {
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.pricing_box button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+
+  .main {
+    height: max-content;
+    padding: 2em 0;
+  }
+
+  .container {
+    flex-direction: column;
+    gap:4em;
+    border: solid 20px white;
+    background-color: transparent;
+  }
+
+  .pricing_box {
+    width: 18em;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .blob {
+    display: none;
+  }
+
+  .main {
+    position: static;
+    overflow: visible;
+    height: max-content;
+    padding: 2em 0;
+  }
+
+
+  .pricing_box {
+    width: 15em;
+  }
+}
